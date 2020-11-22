@@ -19,7 +19,7 @@ Index of class methods:
 */
 
 /*Class to solve knapsack problem using GA*/
-class knapsackSolver{
+class knapsack_solver{
 public:
 	//number of items
 	int n;
@@ -53,7 +53,7 @@ public:
 		Class constructor
 		@param void
 	*/
-	knapsackSolver(){
+	knapsack_solver(){
 		cin>>n;
 		cin>>capacity;
 
@@ -324,5 +324,5 @@ public:
 int main()
 {
 	srand(time(0));
-	knapsackSolver knapsack;
+	knapsack_solver knapsack;
 }
