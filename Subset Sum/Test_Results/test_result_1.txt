@@ -1,0 +1,4 @@
+Current fitness of population: 20.0218
+Solution achieved !!
+-10 20 30 60 
+Subset sum = 100
