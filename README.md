@@ -100,6 +100,34 @@ long double fitness_evaluation(vector<int>chromosome){
 ```
 
 ### Crossover
+For crossover we selected two parents and created two offsprings. For both the binary chromosome and permutation chromosome, we used one-point crossover method. Here is one of the crossover functions that we used in solving 0-1 Knapsack problem in c++.
+
+```cpp
+/*
+  @param vector<int> parent1
+  @param vector<int> parent2
+  @return pair<vector<int>,vector<int>>
+*/
+pair<vector<int>,vector<int>>crossover(vector<int>parent1,vector<int>parent2){
+  vector<int>child1;
+  vector<int>child2;
+
+  int random_point = rand()%n;
+
+  for(int i=0;i<random_point;i++){
+    child1.push_back(parent1[i]);
+    child2.push_back(parent2[i]);
+  }
+
+  for(int i=random_point;i<n;i++){
+    child1.push_back(parent2[i]);
+    child2.push_back(parent1[i]);
+  }
+  
+  return {child1,child2};
+}
+```
+
 ### Mutation
 ### Creating Offsprings
 ### Selecting best ones
