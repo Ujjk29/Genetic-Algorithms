@@ -7,9 +7,8 @@ According to the article from [towardsdatascience](https://towardsdatascience.co
 ## How we solved the assignments using genetic algorithm
 
 ### Initializing the population
-The intial population is randomply generated and we make sure that all the chromosomes in the population are distinct.
+The intial population is randomply generated and we make sure that all the chromosomes in the population are distinct. Here is the code of how we generated intial population in C++ in N-Queen assignment.
 
-Here is the code of how we generated intial population in C++ in N-Queen assignment.
 Creating Random Permutation
 ```cpp
 /*
@@ -48,7 +47,7 @@ void population_initialization(int size){
 ### Fitness Function
 For every chromosome in population, we calculated its fitness. For different assignments we used different fitness functions. But we always ensured that the fitness function must be monotonically increasing/decreasing as we reach the one of the possible solutions.
 
-Here is one of the code snippet of calculating fitness function in N-Queen assignment. For every chromosome in population, we calculated the number of collisions in the chess board. And we declared fitness as (1/(collisions+0.01)). We added 0.01 to avoid the scenario where we get 0 collisions. This fitness function ensures that as number of collisions increases, the fitness will decrease. And as collisions can't be less than 0, this function is monotonic in nature.
+Here is one of the code snippet of calculating fitness function in N-Queen assignment. For every chromosome in population, we calculated the number of collisions in the chess board. And we declared fitness as ```(1/(collisions+0.01))```. We added 0.01 to avoid the scenario where we get 0 collisions. This fitness function ensures that as number of collisions increases, the fitness will decrease. And as collisions can't be less than 0, this function is monotonic in nature.
 ```cpp
 /*
   This function calculates collisions for a particular board.
