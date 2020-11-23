@@ -11,10 +11,6 @@ The intial population is randomply generated and we make sure that all the chrom
 
 Creating Random Permutation
 ```cpp
-/*
-  @param int n
-  @return vector<int>
-*/
 vector<int> genrate_random_permutation(int n){
   vector<int>random_permutation;
   for(int i=1;i<=n;i++){
@@ -27,10 +23,6 @@ vector<int> genrate_random_permutation(int n){
 
 Intializing the population with unique random permutations.
 ```cpp
-/*
-  @param int size
-  @return void
-*/
 void population_initialization(int size){
   set<vector<int>>population_set;
   for(int i=0;i<size;i++){
@@ -49,32 +41,20 @@ For every chromosome in population, we calculated its fitness. For different ass
 
 Here is one of the code snippet of calculating fitness function in N-Queen assignment. For every chromosome in population, we calculated the number of collisions in the chess board. And we declared fitness as ```(1/(collisions+0.01))```. We added 0.01 to avoid the scenario where we get 0 collisions. This fitness function ensures that as number of collisions increases, the fitness will decrease. And as collisions can't be less than 0, this function is monotonic in nature.
 ```cpp
-/*
-  This function calculates collisions for a particular board.
-  @param vector<int> chromosome
-  @return int
-*/
 int collision_calculator(vector<int>chromosome){
-  /*
-    2D representation of chromosomes.
-    Queen vector shows positions on board.
-  */
   vector<pair<int,int> >queen;
   for(int i=0;i<n;i++){
     queen.push_back({chromosome[i]-1,i});
   }
 
-  //Finding number of collisions.
   long double collisions=0;
   for(int i=0;i<n;i++){
     for(int j=0;j<n;j++){
       if(i!=j){
-        //line collision check
         if(queen[i].first==queen[j].first || queen[i].second==queen[j].second){
           collisions++;
           continue;
         }
-        //diagonal collision check
         int diffx = abs(queen[i].first-queen[j].first);
         int diffy = abs(queen[i].second-queen[j].second);
         if(diffx==diffy){
@@ -86,11 +66,6 @@ int collision_calculator(vector<int>chromosome){
   return collisions;
 }
 
-/*
-  function to evaluate fitness
-  @param vector<int> chromosome
-  @return long double
-*/
 long double fitness_evaluation(vector<int>chromosome){
   int collisions = collision_calculator(chromosome);
   long double fitness,epsilon=0.01;
@@ -103,11 +78,6 @@ long double fitness_evaluation(vector<int>chromosome){
 For crossover we selected two parents and created two offsprings. For both the binary chromosome and permutation chromosome, we used one-point crossover method. Here is one of the crossover functions that we used in solving 0-1 Knapsack problem in c++.
 
 ```cpp
-/*
-  @param vector<int> parent1
-  @param vector<int> parent2
-  @return pair<vector<int>,vector<int>>
-*/
 pair<vector<int>,vector<int>>crossover(vector<int>parent1,vector<int>parent2){
   vector<int>child1;
   vector<int>child2;
