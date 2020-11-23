@@ -96,6 +96,70 @@ pair<vector<int>,vector<int>>crossover(vector<int>parent1,vector<int>parent2){
 ```
 
 ### Mutation
+We do mutation to the resultant offspring to ensure that fitness of the next generation doesn't become constant. Here is the code snippet of doing mutation on the binary chromosome.
+
+```cpp
+void mutation(vector<int>&chromosome){
+  srand(rand()%1000000000);
+  double limit = (double)1/(double)n;
+  for(int i=0;i<chromosome.size();i++){
+    if(frand(0.0,1.0)>limit){
+      chromosome[i]=!chromosome[i];
+    }
+  }
+}
+```
+
 ### Creating Offsprings
+For every 5 parents, we select best 2 parents and they are used to make new offsprings using crossover and mutation. Here is code snippet, selecting 2 best parents out of 5, and then performing crossover to get offsprings and finally applying mutation on it.
+
+```cpp
+pair<vector<int>,vector<int> >parent_selection(){
+  vector<int>selected_parent_index;
+  int count=0;
+  while(count!=5){
+    int index = rand()%population_size;
+    selected_parent_index.push_back(index);
+    count++;
+  }
+  vector<pair<int,int> >fitness_of_parents;
+  for(int i=0;i<selected_parent_index.size();i++){
+    fitness_of_parents.push_back({fitness(population[selected_parent_index[i]]),selected_parent_index[i]});
+  }
+  sort(fitness_of_parents.begin(),fitness_of_parents.end());
+  vector<int>best_parent1 = population[fitness_of_parents[4].second];
+  vector<int>best_parent2 = population[fitness_of_parents[3].second];
+  pair<vector<int>,vector<int> >child = crossover(best_parent1,best_parent2);
+  mutation(child.first);
+  mutation(child.second);
+  return {child.first,child.second};
+}
+```
+
 ### Selecting best ones
+We now combine parents and generated offsprings in the same pool and select best ones by calculating the fitness function. For eg, the size of initial population is 100, then 20 offsprings are added. Now out of 120, we select best 100 on the basis of their fitness. Here is the code snippet of selecting survivors.
+
+```cpp
+void survivor_selection(){
+  vector<pair<int,vector<int> > >new_generation;
+  for(int i=0;i<population_size/5;i++){
+    pair<vector<int>,vector<int> >child = parent_selection();
+    new_generation.push_back({fitness(child.first),child.first});
+    new_generation.push_back({fitness(child.second),child.second});
+  }
+  for(int i=0;i<population_size;i++){
+    new_generation.push_back({fitness(population[i]),population[i]});
+  }
+  sort(new_generation.begin(),new_generation.end(),[](pair<int,vector<int> >a,pair<int,vector<int> >b)->bool{return a.first>b.first;});
+  for(int i=0;i<population_size;i++){
+    population[i]=new_generation[i].second;
+    if(new_generation[i].first>maxx){
+      maxx=new_generation[i].first;
+      ans=new_generation[i].second;
+    }
+  }
+}
+```
+
 ### Repeating the process
+We repeat this process several times. The best number of iterations depends on the size of the intial population that you start with. For 100 population size, we use 5,000 to 10,000 iterations. For large test cases of N-Queen problem and Travelling salesman problem, we got results within few minutes using genetic algorithm as compared to the normal backtracking approach that would have taken time more than the age of universe.
