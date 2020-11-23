@@ -167,4 +167,10 @@ void survivor_selection(){
 ```
 
 ### Repeating the process
-We repeat this process several times. The best number of iterations depends on the size of the intial population that you start with. For 100 population size, we use 5,000 to 10,000 iterations. For large test cases of N-Queen problem and Travelling salesman problem, we got results within few minutes using genetic algorithm as compared to the normal backtracking approach that would have taken time more than the age of universe.
+We repeat this process several times. The best number of iterations depends on the size of the intial population that you start with. For 100 population size, we use 5,000 to 10,000 iterations. 
+
+## Results
+For large test cases of N-Queen problem and Travelling salesman problem, we got results within few minutes using genetic algorithm as compared to the normal backtracking approach that would have taken time more than the age of universe.
+
+## Room for improvement
+There are fixed number of chromosomes for the given problem. And sometimes, we calculate the fitness of the chromosomes that we have already calculated. So we can use map to store chromosome and its fitness value. This will increase space complexity, but will reduce the time complexity drastically.
