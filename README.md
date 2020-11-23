@@ -11,7 +11,7 @@ According to the article from [towardsdatascience](https://towardsdatascience.co
 
 ## How we solved the assignments using genetic algorithm
 
-### Initializing the population
+### 1. Initializing the population
 The intial population is randomply generated and we make sure that all the chromosomes in the population are distinct. Here is the code of how we generated intial population in C++ in N-Queen assignment.
 
 Creating Random Permutation
@@ -41,7 +41,7 @@ void population_initialization(int size){
 }
 ```
 
-### Fitness Function
+### 2. Fitness Function
 For every chromosome in population, we calculated its fitness. For different assignments we used different fitness functions. But we always ensured that the fitness function must be monotonically increasing/decreasing as we reach the one of the possible solutions.
 
 Here is one of the code snippet of calculating fitness function in N-Queen assignment. For every chromosome in population, we calculated the number of collisions in the chess board. And we declared fitness as ```(1/(collisions+0.01))```. We added 0.01 to avoid the scenario where we get 0 collisions. This fitness function ensures that as number of collisions increases, the fitness will decrease. And as collisions can't be less than 0, this function is monotonic in nature.
@@ -80,7 +80,7 @@ long double fitness_evaluation(vector<int>chromosome){
 }
 ```
 
-### Crossover
+### 3. Crossover
 For crossover we selected two parents and created two offsprings. For both the binary chromosome and permutation chromosome, we used one-point crossover method. Here is one of the crossover functions that we used in solving 0-1 Knapsack problem in c++.
 
 ```cpp
@@ -100,7 +100,7 @@ pair<vector<int>,vector<int>>crossover(vector<int>parent1,vector<int>parent2){
 }
 ```
 
-### Mutation
+### 4. Mutation
 We do mutation to the resultant offspring to ensure that fitness of the next generation doesn't become constant. Here is the code snippet of doing mutation on the binary chromosome.
 
 ```cpp
@@ -115,7 +115,7 @@ void mutation(vector<int>&chromosome){
 }
 ```
 
-### Creating Offsprings
+### 5. Creating Offsprings
 For every 5 parents, we select best 2 parents and they are used to make new offsprings using crossover and mutation. Here is code snippet, selecting 2 best parents out of 5, and then performing crossover to get offsprings and finally applying mutation on it.
 
 ```cpp
@@ -141,7 +141,7 @@ pair<vector<int>,vector<int> >parent_selection(){
 }
 ```
 
-### Selecting best ones
+### 6. Selecting best ones
 We now combine parents and generated offsprings in the same pool and select best ones by calculating the fitness function. For eg, the size of initial population is 100, then 20 offsprings are added. Now out of 120, we select best 100 on the basis of their fitness. Here is the code snippet of selecting survivors.
 
 ```cpp
@@ -166,7 +166,7 @@ void survivor_selection(){
 }
 ```
 
-### Repeating the process
+### 7. Repeating the process
 We repeat this process several times. The best number of iterations depends on the size of the intial population that you start with. For 100 population size, we use 5,000 to 10,000 iterations. 
 
 ## Results
