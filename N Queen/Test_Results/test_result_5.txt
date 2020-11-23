@@ -1,0 +1,38 @@
+Current fitness average of population : 0.0620375
+Current fitness average of population : 0.0745605
+Current fitness average of population : 0.0818254
+Current fitness average of population : 0.0871103
+Current fitness average of population : 0.0906758
+Current fitness average of population : 0.0950723
+Current fitness average of population : 0.0988975
+Current fitness average of population : 0.10239
+Current fitness average of population : 0.111604
+Current fitness average of population : 0.119251
+Current fitness average of population : 0.122494
+Current fitness average of population : 0.124573
+Current fitness average of population : 0.127731
+Current fitness average of population : 0.131637
+Current fitness average of population : 0.135793
+Current fitness average of population : 0.1397
+Current fitness average of population : 0.149827
+Current fitness average of population : 0.155133
+Current fitness average of population : 0.158871
+Current fitness average of population : 0.161364
+Current fitness average of population : 0.16344
+Current fitness average of population : 0.165932
+Current fitness average of population : 1.16634
+Solution achieved at iteration : 22
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 

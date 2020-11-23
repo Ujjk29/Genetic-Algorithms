@@ -1,0 +1,6 @@
+Current fitness average of population : 10.2449
+Solution achieved at iteration : 0
+0 1 0 0 
+0 0 0 1 
+1 0 0 0 
+0 0 1 0 

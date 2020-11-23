@@ -1,0 +1,87 @@
+Current fitness average of population : 0.0748041
+Current fitness average of population : 0.0878702
+Current fitness average of population : 0.0989456
+Current fitness average of population : 0.105526
+Current fitness average of population : 0.112285
+Current fitness average of population : 0.117845
+Current fitness average of population : 0.121837
+Current fitness average of population : 0.125744
+Current fitness average of population : 0.129069
+Current fitness average of population : 0.132476
+Current fitness average of population : 0.138127
+Current fitness average of population : 0.140953
+Current fitness average of population : 0.148514
+Current fitness average of population : 0.153082
+Current fitness average of population : 0.15599
+Current fitness average of population : 0.157236
+Current fitness average of population : 0.158482
+Current fitness average of population : 0.158898
+Current fitness average of population : 0.160144
+Current fitness average of population : 0.165126
+Current fitness average of population : 0.168034
+Current fitness average of population : 0.171772
+Current fitness average of population : 0.174679
+Current fitness average of population : 0.177171
+Current fitness average of population : 0.180908
+Current fitness average of population : 0.1834
+Current fitness average of population : 0.187958
+Current fitness average of population : 0.190447
+Current fitness average of population : 0.190447
+Current fitness average of population : 0.192107
+Current fitness average of population : 0.192937
+Current fitness average of population : 0.194597
+Current fitness average of population : 0.194597
+Current fitness average of population : 0.195427
+Current fitness average of population : 0.197086
+Current fitness average of population : 0.198746
+Current fitness average of population : 0.203717
+Current fitness average of population : 0.208688
+Current fitness average of population : 0.208688
+Current fitness average of population : 0.212008
+Current fitness average of population : 0.214497
+Current fitness average of population : 0.215327
+Current fitness average of population : 0.220298
+Current fitness average of population : 0.224439
+Current fitness average of population : 0.226099
+Current fitness average of population : 0.229418
+Current fitness average of population : 0.234389
+Current fitness average of population : 0.23936
+Current fitness average of population : 0.242672
+Current fitness average of population : 0.247642
+Current fitness average of population : 0.248472
+Current fitness average of population : 0.255925
+Current fitness average of population : 0.257584
+Current fitness average of population : 0.262555
+Current fitness average of population : 0.268356
+Current fitness average of population : 0.274157
+Current fitness average of population : 0.278298
+Current fitness average of population : 0.285751
+Current fitness average of population : 0.28741
+Current fitness average of population : 0.296522
+Current fitness average of population : 0.299004
+Current fitness average of population : 0.299004
+Current fitness average of population : 0.301485
+Current fitness average of population : 0.306448
+Current fitness average of population : 0.306448
+Current fitness average of population : 0.311411
+Current fitness average of population : 0.311411
+Current fitness average of population : 0.313892
+Current fitness average of population : 0.313892
+Current fitness average of population : 0.313892
+Current fitness average of population : 0.318855
+Current fitness average of population : 0.321336
+Current fitness average of population : 0.323817
+Current fitness average of population : 1.3238
+Solution achieved at iteration : 73
+0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 1 0 0 0 0 0 0 0 0 0 
