@@ -1,10 +1,10 @@
 # Genetic-Algorithms
 This repository is all about solving some well known backtracking problems with the help of genetic algorithm. Here is the list of problems that we solved using genetic algorithm:
 
-1. [01 Knapsack](https://github.com/Ujjk29/Genetic-Algorithms/tree/main/01%20Knapsack)
-2. [N Queen](https://github.com/Ujjk29/Genetic-Algorithms/tree/main/N%20Queen)
-3. [Subset Sum](https://github.com/Ujjk29/Genetic-Algorithms/tree/main/Subset%20Sum)
-4. [Travelling Salesman](https://github.com/Ujjk29/Genetic-Algorithms/tree/main/Travelling%20Salesman)
+1. [01 Knapsack](../../tree/main/01%20Knapsack)
+2. [N Queen](../../tree/main/N%20Queen)
+3. [Subset Sum](../../tree/main/Subset%20Sum)
+4. [Travelling Salesman](../../tree/main/Travelling%20Salesman)
 
 ## Introduction to Genetic Algorithm
 According to the article from [towardsdatascience](https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3#:~:text=A%20genetic%20algorithm%20is%20a,offspring%20of%20the%20next%20generation.), a genetic algorithm is a search heuristic that is inspired by Charles Darwin's theory of natural evolution. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce offspring of the next generation.
