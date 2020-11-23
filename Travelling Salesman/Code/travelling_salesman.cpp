@@ -34,7 +34,7 @@ private:
 	//combination of item selection.
 	vector<vector<int>>population;
 
-	//stores the fitness of the resulted chrmo
+	//stores the fitness of the resulted chromosome
 	vector<int>fitness_of_ith_chromosome;
 
 	// minn contains minimum fitness
