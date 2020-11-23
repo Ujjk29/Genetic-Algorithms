@@ -46,7 +46,6 @@ int collision_calculator(vector<int>chromosome){
   for(int i=0;i<n;i++){
     queen.push_back({chromosome[i]-1,i});
   }
-
   long double collisions=0;
   for(int i=0;i<n;i++){
     for(int j=0;j<n;j++){
@@ -65,7 +64,9 @@ int collision_calculator(vector<int>chromosome){
   }
   return collisions;
 }
+```
 
+```
 long double fitness_evaluation(vector<int>chromosome){
   int collisions = collision_calculator(chromosome);
   long double fitness,epsilon=0.01;
@@ -81,19 +82,15 @@ For crossover we selected two parents and created two offsprings. For both the b
 pair<vector<int>,vector<int>>crossover(vector<int>parent1,vector<int>parent2){
   vector<int>child1;
   vector<int>child2;
-
   int random_point = rand()%n;
-
   for(int i=0;i<random_point;i++){
     child1.push_back(parent1[i]);
     child2.push_back(parent2[i]);
   }
-
   for(int i=random_point;i<n;i++){
     child1.push_back(parent2[i]);
     child2.push_back(parent1[i]);
   }
-  
   return {child1,child2};
 }
 ```
