@@ -66,7 +66,7 @@ int collision_calculator(vector<int>chromosome){
 }
 ```
 
-```
+```cpp
 long double fitness_evaluation(vector<int>chromosome){
   int collisions = collision_calculator(chromosome);
   long double fitness,epsilon=0.01;
