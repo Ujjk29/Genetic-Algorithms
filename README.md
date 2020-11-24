@@ -1,4 +1,4 @@
-# Genetic-Algorithms
+# Solving Backtracking Problems using Genetic Algorithms
 This repository is all about solving some well known backtracking problems with the help of genetic algorithm. Here is the list of problems that we solved using genetic algorithm:
 
 1. [01 Knapsack](../../tree/main/01%20Knapsack)
